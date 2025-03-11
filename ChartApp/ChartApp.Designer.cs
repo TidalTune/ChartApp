@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnOpenFile = new Button();
-            label1 = new Label();
+            lblDisplay = new Label();
             SuspendLayout();
             // 
             // btnOpenFile
@@ -42,24 +42,25 @@
             btnOpenFile.UseVisualStyleBackColor = true;
             btnOpenFile.Click += btnOpenFile_Click;
             // 
-            // label1
+            // lblDisplay
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(18, 46);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
+            lblDisplay.AutoSize = true;
+            lblDisplay.Location = new Point(18, 46);
+            lblDisplay.Name = "lblDisplay";
+            lblDisplay.Size = new Size(38, 15);
+            lblDisplay.TabIndex = 1;
+            lblDisplay.Text = "label1";
             // 
             // ChartApp
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(lblDisplay);
             Controls.Add(btnOpenFile);
             Name = "ChartApp";
             Text = "Form1";
+            Paint += ChartApp_Paint;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -67,6 +68,6 @@
         #endregion
 
         private Button btnOpenFile;
-        private Label label1;
+        private Label lblDisplay;
     }
 }
